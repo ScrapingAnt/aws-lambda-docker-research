@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: lambda_chrome_in_docker_research
+
+Globals:
+  Function:
+    Timeout: 60
+
+Resources:
+  LambdaExecutorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      PackageType: Image
+      FunctionName:
+        Ref: FunctionNameParameter
+      ImageUri:
+        Ref: ImageUriParameter
+      MemorySize: 2048
+      Tracing: Active
+
+Parameters:
+  ImageUriParameter:
+    Type: String
+  FunctionNameParameter:
+    Type: String
