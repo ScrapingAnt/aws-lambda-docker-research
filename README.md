@@ -1,5 +1,5 @@
 # Puppeteer performance in AWS Lambda Docker containers
-This repo contains all code and scripts, used in article https://dev.to/megabotan/aws-lambda-puppeteer-in-docker
+This repo contains all code and scripts, used in article https://dev.to/megabotan/puppeteer-performance-in-aws-lambda-docker-containers-2325
 ## Local run
 You need to setup docker, and download aws-lambda-rie binaries `./download_rie.sh`
 #### Run custom docker lambda image

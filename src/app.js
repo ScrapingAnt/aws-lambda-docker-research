@@ -1,4 +1,3 @@
-delete process.env.AWS_XRAY_CONTEXT_MISSING;
 const AWSXRay = require('aws-xray-sdk-core');
 
 AWSXRay.setLogger(console);
@@ -96,7 +95,6 @@ async function lambdaHandler(event, context) {
     extractedText = await page.$eval('*', (el) => el.innerText);
     textExtractSubsegment.close();
     console.info('text extracted');
-    // context.succeed(extractedText);
   } finally {
     console.info('finally');
     await page.close();
